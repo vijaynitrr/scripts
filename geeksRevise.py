@@ -3,7 +3,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 import time
 
-browser = webdriver.Firefox() # Get local session of firefox
+browser = webdriver.Chrome('/usr/local/bin/chromedriver') # Get local session of firefox
 browser.get("https://workflowy.com") # Load page
 browser.find_element_by_css_selector('.button--top-right').click()
 
@@ -17,15 +17,15 @@ password.send_keys("vk@#9717")
 login_attempt = browser.find_element_by_xpath("//*[@type='submit']")
 login_attempt.submit()
 
-time.sleep(20)
+time.sleep(10)
 clickAble_link = browser.find_element_by_xpath('//a[@href="/#/ff9bf0779e54"]')
 clickAble_link.click()
 
-time.sleep(20)
+time.sleep(10)
 clickable_links = browser.find_elements_by_xpath(".//a[contains(@href, '/#/')]")
 clickable_links[-1].click()
 
-time.sleep(10)
+time.sleep(5)
 clickable_links = browser.find_elements_by_xpath(".//a[contains(@href, 'http://www.geeksforgeeks.org')]")
 for links in clickable_links:
     links.click()
