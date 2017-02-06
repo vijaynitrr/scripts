@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 import time
+import commands
 
 browser = webdriver.Chrome('/usr/local/bin/chromedriver') # Get local session of firefox
 browser.get("https://workflowy.com") # Load page
@@ -27,7 +28,13 @@ clickable_links[-1].click()
 
 time.sleep(5)
 clickable_links = browser.find_elements_by_xpath(".//a[contains(@href, 'http://www.geeksforgeeks.org')]")
+
+urls = []
 for links in clickable_links:
+    urls.append(links.get_attribute('href'))
     links.click()
 
 browser.close()
+
+for webUrl in urls:
+    commands.getstatusoutput("python mdWriter.py "+webUrl)
