@@ -2,6 +2,9 @@ import urllib2
 from bs4 import BeautifulSoup
 import time
 import sys
+from os.path import expanduser
+
+home = expanduser("~")
 
 url = sys.argv[1]
 openUrl = urllib2.urlopen(url)
@@ -15,7 +18,7 @@ for tags in soup.findAll("div", { "class" : "entry-content" }):
     ques_desc = tags.find('p').text
 
 timestr = time.strftime("%d-%m-%Y")
-filename = "/home/vijay/Library/code-snippets/markdowns/" + timestr + ".md"
+filename = home + "/Library/code-snippets/markdowns/" + timestr + ".md"
 
 with open(filename, "a") as myfile:
     str = "\n\n" + "# " + ques_title + "\n\n" + ques_desc + "\n"
