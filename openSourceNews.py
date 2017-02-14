@@ -1,6 +1,7 @@
 import webbrowser
 
-favUrls = ['http://www.infoworld.com/category/open-source-tools/','http://opensourceforu.com/','https://github.com/trending']
+favUrls = ['http://www.omgubuntu.co.uk','http://www.webupd8.org/','http://linuxscoop.com/','http://www.ubuntugeek.com','http://www.techdrivein.com/',
+                'http://ubuntuhandbook.org/','https://www.unixmen.com/','http://linuxg.net/']
 
 # Linux
 chrome_path = '/usr/bin/google-chrome %s'
