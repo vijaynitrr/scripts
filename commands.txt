@@ -1,0 +1,34 @@
+# server commands
+
+# list of open sockets 
+alias open-tcp='cat /proc/net/tcp'
+alias open-udp='cat /proc/net/udp'
+alias open-raw='cat /proc/net/raw'
+
+# list of open files
+alias open-files='lsof'
+alias ipv4-ports='lsof -i 4'
+
+
+# To display open ports and established TCP connections,
+alias open-tcp-connections='netstat -vatn'
+
+# To display only open UDP ports try the following command
+alias open-udp-connections='netstat -vaun'
+
+# To display all sockets
+alias socket-list='ss -a'
+
+# check load on server
+alias server-load1='w'
+alias server-load2='cat /proc/loadavg'
+
+ 
+# check server uptime
+alias uptime='uptime'
+
+# check routing table
+alias show-routing='netstat -r'
+
+# check listening tcp
+alias listen-tcp='ss -ntl'
