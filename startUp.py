@@ -3,7 +3,7 @@ import os
 import subprocess
 
 prefix_command = "sudo service"
-commands_list = [" redis_6379 "," redis-sentinel "," rabbitmq-server "," teamviewerd "," apache2 "," mysql ", " supervisor "]
+commands_list = [" redis_6379 "," redis-sentinel "," rabbitmq-server "," teamviewerd "," apache2 "," mysql ", " supervisor ", " mongodb "]
 action = "stop"
 
 for curCommand in commands_list:
