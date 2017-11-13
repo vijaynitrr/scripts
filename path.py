@@ -1,4 +1,6 @@
 import urllib2
+import timestr
+import test2
 from bs4 import BeautifulSoup
 import time
 import sys
